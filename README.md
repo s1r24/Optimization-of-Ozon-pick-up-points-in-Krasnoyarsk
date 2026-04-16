@@ -11,6 +11,25 @@
 - `data/raw/` — исходные данные
 - `data/processed/` — обработанные данные
 - `notebooks/` — Jupyter-ноутбуки с анализом
+- `docs/` - распределение задач
 
 ## Установка
 pip install -r requirements.txt
+
+## Источники данных
+
+### Население
+- **По 7 административным районам города:** Всероссийская перепись населения 2020
+  https://rosstat.gov.ru/vpn_popul
+
+### ПВЗ Ozon
+- Внутренний датасет, предоставлен куратором (active_points_Other.xlsx)
+
+### Геоданные
+- **Границы города и районов, здания, дороги:** OpenStreetMap
+  © OpenStreetMap contributors, ODbL лицензия
+  https://www.openstreetmap.org/
+- **Геокодация адресов ПВЗ:** Nominatim (OSM)
+
+### Коммерческая недвижимость
+- (позже, когда соберёте)

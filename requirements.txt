@@ -1,0 +1,9 @@
+pandas
+openpyxl
+geopandas
+h3
+folium
+osmnx
+requests
+matplotlib
+jupyter
