@@ -1,1 +1,16 @@
-# Optimization-of-Ozon-pick-up-points-in-Krasnoyarsk
+# Оптимизация размещения сети ПВЗ Ozon в Красноярске
+
+Учебный проект по геоанализу. Команда 12, вариант — Красноярск.
+
+## Команда
+- ФИО 1
+- ФИО 2  
+- ФИО 3
+
+## Структура
+- `data/raw/` — исходные данные
+- `data/processed/` — обработанные данные
+- `notebooks/` — Jupyter-ноутбуки с анализом
+
+## Установка
+pip install -r requirements.txt
