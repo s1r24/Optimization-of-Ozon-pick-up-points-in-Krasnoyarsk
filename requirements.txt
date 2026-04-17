@@ -7,3 +7,6 @@ osmnx
 requests
 matplotlib
 jupyter
+geopy
+tqdm
+ipykernel
