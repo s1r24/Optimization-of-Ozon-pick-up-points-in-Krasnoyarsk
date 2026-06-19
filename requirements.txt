@@ -10,3 +10,7 @@ jupyter
 geopy
 tqdm
 ipykernel
+sqlalchemy
+psycopg2-binary
+pyvis
+scipy
