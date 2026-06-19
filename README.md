@@ -12,7 +12,7 @@
 - `data/processed/` — обработанные данные
 - `notebooks/` — Jupyter-ноутбуки с анализом
 - `docs/` - распределение задач
-- `repots/` - визуальные карты
+- `reports/` - визуальные карты
 
 ## Установка
 pip install -r requirements.txt
