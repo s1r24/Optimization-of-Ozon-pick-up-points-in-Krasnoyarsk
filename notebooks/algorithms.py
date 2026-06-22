@@ -115,29 +115,22 @@ def business_roi_strategy(realty_gdf, pvz_gdf, top_n=5):
             cand_buffer = candidate.geometry.buffer(COVERAGE_RADIUS)
             unique_area = cand_buffer.difference(existing_coverage)
             ratio = unique_area.area / cand_buffer.area if cand_buffer.area > 0 else 0
-            
-            # 1. Считаем чистый приток людей
+
             net_new_pop = candidate['population_estimated'] * ratio
-            
-            # 2. Получаем цену и площадь (защита от деления на ноль)
+
             price = max(candidate['price_rub_per_month'], 1)
             area = candidate['area_m2']
             
-            # 3. ВЫЧИСЛЯЕМ БИЗНЕС-СКОР (МАГИЯ ЗДЕСЬ)
-            # База: Сколько людей мы получаем на 1000 рублей аренды
             roi_score = (net_new_pop / price) * 1000
             
-            # Бонус за площадь: ПВЗ меньше 40 квадратов - тесновато, даем штраф. 
-            # Идеально 70-90 квадратов.
             if area < 40:
-                roi_score *= 0.8  # Режем скор на 20%
+                roi_score *= 0.8
             elif 60 <= area <= 100:
-                roi_score *= 1.2  # Даем бонус 20% за идеальный размер
+                roi_score *= 1.2
                 
-            # Итоговый балл
             score = roi_score 
             
-            if score > best_score and net_new_pop > 50: # Отсекаем точки с нулевым или смешным приростом
+            if score > best_score and net_new_pop > 50:
                 best_score = score
                 best_idx = idx
                 best_net_pop = net_new_pop
@@ -149,7 +142,6 @@ def business_roi_strategy(realty_gdf, pvz_gdf, top_n=5):
         winner = working_realty.loc[best_idx].copy()
         winner['expected_coverage'] = best_net_pop
         
-        # Можем сохранить сам скор для аналитики
         winner['business_score'] = best_score 
         
         top_candidates.append(winner)
