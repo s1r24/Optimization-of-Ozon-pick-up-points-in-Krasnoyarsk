@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "candidates_v3_roi",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1336, "address": "Красноярский край, Красноярск, Аральская ул., 1Вр-н Ленинский", "latitude": 55.9885425, "longitude": 93.0079906, "area_m2": 120.0, "price_rub_per_month": 400, "index_right": 300, "h3_id": "880b9a75bbfffff", "population_estimated": 13969, "expected_coverage": 3794.497363117754, "business_score": 9486.2434077943853 }, "geometry": { "type": "Point", "coordinates": [ 93.007990600000014, 55.9885425 ] } },
+{ "type": "Feature", "properties": { "id": 1637, "address": "Красноярский край, Красноярск, ул. Калинина, 45Ир-н Железнодорожный", "latitude": 56.0315092, "longitude": 92.803193, "area_m2": 123.8, "price_rub_per_month": 100, "index_right": 128, "h3_id": "880b9a76ebfffff", "population_estimated": 6510, "expected_coverage": 364.64718006811546, "business_score": 3646.4718006811549 }, "geometry": { "type": "Point", "coordinates": [ 92.803193, 56.0315092 ] } },
+{ "type": "Feature", "properties": { "id": 1794, "address": "Красноярский край, Красноярск, Брянская ул., 360р-н Центральный", "latitude": 56.0459991, "longitude": 92.857507, "area_m2": 100.0, "price_rub_per_month": 450, "index_right": 337, "h3_id": "880b9a76bdfffff", "population_estimated": 1342, "expected_coverage": 1261.2194652218866, "business_score": 3363.2519072583641 }, "geometry": { "type": "Point", "coordinates": [ 92.857507, 56.0459991 ] } },
+{ "type": "Feature", "properties": { "id": 1495, "address": "Красноярский край, Красноярск, ул. Елены Стасовой, 35р-н Октябрьский", "latitude": 56.0199615, "longitude": 92.718185, "area_m2": 126.0, "price_rub_per_month": 500, "index_right": 271, "h3_id": "880b9a7659fffff", "population_estimated": 2293, "expected_coverage": 1611.6783629611493, "business_score": 3223.3567259222987 }, "geometry": { "type": "Point", "coordinates": [ 92.718185, 56.0199615 ] } },
+{ "type": "Feature", "properties": { "id": 2164, "address": "Красноярский край, Красноярск, ул. Красной Гвардии, 21р-н Железнодорожный", "latitude": 56.0221827, "longitude": 92.8379166, "area_m2": 100.0, "price_rub_per_month": 750, "index_right": 172, "h3_id": "880b9a76adfffff", "population_estimated": 10314, "expected_coverage": 1680.4664187188828, "business_score": 2688.7462699502125 }, "geometry": { "type": "Point", "coordinates": [ 92.8379166, 56.0221827 ] } }
+]
+}
