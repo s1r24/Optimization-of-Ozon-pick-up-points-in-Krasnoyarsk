@@ -7,10 +7,6 @@ from scipy.spatial import cKDTree
 def calculate_macro_scores(hex_gdf: gpd.GeoDataFrame, 
                            pvz_gdf: gpd.GeoDataFrame, 
                            realty_gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    """
-    Рассчитывает индекс дефицита для каждого гексагона на основе 
-    удаленности от ПВЗ и наличия коммерческой недвижимости.
-    """
     scored_hex = hex_gdf.copy()
     
     original_crs = scored_hex.crs
@@ -46,10 +42,6 @@ def calculate_macro_scores(hex_gdf: gpd.GeoDataFrame,
 
 def select_top_5_hexagons_nms(scored_hex: gpd.GeoDataFrame, 
                               cannibalization_k_ring: int = 1) -> gpd.GeoDataFrame:
-    """
-    Выбирает ровно 5 лучших гексагонов, избегая их концентрации в одном месте 
-    с помощью жадного алгоритма и пространственного штрафа (NMS).
-    """
     candidates = scored_hex[scored_hex['deficit_score'] > 0].copy()
     
     selected_hex_ids = []
